@@ -25,5 +25,9 @@ public class Mage extends Character {
 	dmg = 100;  //always do exactly 100 damage
 	chr.lowerHP(dmg);
 	return dmg;
-    } 
+    }
+
+    public String about(){
+	return "Mage - from this mans staff turns snakes and sprouts water";
+    }
 }

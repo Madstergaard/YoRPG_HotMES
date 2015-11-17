@@ -25,4 +25,8 @@ public class Warrior extends Character {
         chr.lowerHP(dmg);
 	return dmg;
 	}
+
+    public String about(){
+	return 	"Warrior - the ever valiant sword-welder, whose conviction overshadows youth";
+    }
 }

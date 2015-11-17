@@ -25,4 +25,8 @@ public class Alchemist extends Character {
 	str = (int)(str*1.5); //does no damage, improves stats permanently (or until normalize() is called
 	def = (int)(def*1.5);	
     }
+
+    public String about(){
+	return "Alchemist - whether this man yield sorcerery or science no man doth know";
+    }
 }

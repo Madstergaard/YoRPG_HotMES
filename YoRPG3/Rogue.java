@@ -26,5 +26,9 @@ public class Rogue extends Character {
         this.hp += (dmg/2);   //I wanted to steal an item, but those don't exist yet, so I'll steal hp instead
 	return dmg;
 	}
+
+    public String about(){
+	return "Rogue - this cunning vagrant's quick-blade knowst not honor";
+    }
 	
 }

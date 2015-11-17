@@ -24,4 +24,9 @@ public class Monster extends Character {
 	dmg = (int)(str*atk) - (chr.getDefense()/2);  //bite will reduce targets def by half
 	chr.lowerHP(dmg);	
 	}
+
+    public String about(){
+	return 	"Monster - 'ere in its heart has light long since been begotten, if 'ere lies any heart at all";
+    }
+    
 }

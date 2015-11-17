@@ -27,4 +27,8 @@ public class Archer extends Character {
 	chr.lowerHP(dmg);
 	return dmg;
 	}
+
+    public String about(){
+	return "Archer - even a hundred leagues betwixt he and his foe can't falter this man's arrows";
+    }
 }
