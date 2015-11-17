@@ -15,8 +15,18 @@ public class Alchemist extends Character {
     public Alchemist(String newName){
 	super();
         name = newName;
-        class_type = 6;  //adjust class_type accordingly	
+	//adjust class_type accordingly	
 	//can adjust stats here
+    }
+
+    public void normalize() {
+	def += 2;
+	atk -= .2;
+    }
+
+    public void specialize() {
+	def -= 2;
+	atk += .2;
     }
     
     //extended methods

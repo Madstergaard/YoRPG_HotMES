@@ -16,7 +16,17 @@ public class Mage extends Character {
     public Mage(String newName){
 	super();
 	name = newName;	
-	class_type = 3;  //adjust class_type accordingly
+	//adjust class_type accordingly
+    }
+
+    public void normalize() {
+	def += 2;
+	atk -= .2;
+    }
+
+    public void specialize() {
+	def -= 2;
+	atk += .2;
     }
     
     //extended methods

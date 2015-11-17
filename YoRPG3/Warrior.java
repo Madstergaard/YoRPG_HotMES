@@ -14,7 +14,7 @@ public class Warrior extends Character {
     public Warrior(String newName){
         super();
 	name = newName;
-        class_type = 1;  //adjust class_type accordingly
+        //adjust class_type accordingly
         //can adjust stats here	
     }
     
@@ -24,7 +24,18 @@ public class Warrior extends Character {
 	dmg = str - chr.getDefense();  //slash will use full strength, instead of mulitplying it by atk
         chr.lowerHP(dmg);
 	return dmg;
-	}
+    }
+
+    public void normalize() {
+	hp = 100;
+	def = 5;
+	atk = .5;
+    }
+
+    public void specialize() {
+	def -= 2;
+	atk += .2;
+    }
 
     public String about(){
 	return 	"Warrior - the ever valiant sword-welder, whose conviction overshadows youth";

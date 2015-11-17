@@ -17,12 +17,12 @@ public class YoRPG {
     //each round, a Warrior and a Monster will be instantiated
     //Is it man or woman?
     private Monster smaug;
-    private Character pat;
 
     private int moveCount;
     private boolean gameOver;
     private int difficulty;
     private int charType;
+    String name;
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -52,7 +52,6 @@ public class YoRPG {
 
 	//difficulty chooser
 	String s;
-	String name = "";
 	s = "Welcome to Ye Olde RPG!\n";
 
 	s += "\nChoose your difficulty: \n";
@@ -90,30 +89,26 @@ public class YoRPG {
 	}
 	catch ( IOException e ) { }
 
+    }//end newgame
 
-	//instantiate the player's character
-        if (charType == 1) {
+    public Character makePat(int charType){
+	Character pat;
+	if (charType == 1) {
 	    pat = new Warrior(name);
-	    System.out.println( Character.descriptions[1] );
 	} if (charType == 2) {
 	    pat = new Mage(name);
-	    System.out.println( Character.descriptions[3] );
 	} if (charType == 3) {
 	    pat = new Rogue(name);
-	    System.out.println( Character.descriptions[4] );
-	}
-	  if (charType == 4) {
+	} if (charType == 4) {
 	    pat = new Archer(name);
-	    System.out.println( Character.descriptions[5] );
 	} if (charType == 5) {
 	    pat = new Alchemist(name);
-	    System.out.println( Character.descriptions[6] );
 	} else {
-	    pat = new Character();
-	  }
-    }//end newGame()
-
-
+	    pat = new Warrior(name);
+	}
+	return pat;
+    }
+    
     /*=============================================
       boolean playTurn -- simulates a round of combat
       pre:  Warrior pat has been initialized
@@ -132,6 +127,8 @@ public class YoRPG {
 	    System.out.println( "Lo, yonder monster approacheth!");
 	    
 	    Monster smaug = new Monster("Smaug");
+
+	    Character pat = makePat(charType);
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 

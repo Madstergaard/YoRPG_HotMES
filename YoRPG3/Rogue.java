@@ -14,8 +14,18 @@ public class Rogue extends Character {
     public Rogue(String newName){
 	super();
 	name = newName;
-	class_type = 4;  //adjust class_type accordingly		
+	//adjust class_type accordingly		
 	//can adjust stats here	
+    }
+
+    public void specialize() {
+	def -= 2;
+	atk += 2;
+    }
+
+    public void normalize() {
+	def += 2;
+	atk -= 2;
     }
     
     //extended methods

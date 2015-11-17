@@ -15,9 +15,19 @@ public class Archer extends Character {
     public Archer(String newName){
 	super();
 	name = newName;
-	class_type = 5;  //adjust class_type accordingly
+	//adjust class_type accordingly
 		
 	//can adjust stats here		
+    }
+
+    public void normalize() {
+	def += 2;
+	atk -= .2;
+    }
+
+    public void specialize() {
+	def -= 2;
+	atk += .2;
     }
     
     //extended methods

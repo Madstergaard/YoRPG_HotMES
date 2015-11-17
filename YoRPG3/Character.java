@@ -24,9 +24,6 @@ public abstract class Character {
 	str = 100;
 	def = 50;
 	atk = 0.8;
-		
-	//assume no subclass, so unknown description index
-	class_type = 0;
     }
 	
     //other methods
@@ -57,17 +54,9 @@ public abstract class Character {
 	return dmg;
     }
 
-    public void specialize(){
-	//any other specialize stat
-        def -= 10;
-        atk += .2;
-    }
+    public abstract void specialize();
     
-    public void normalize(){
-        //revert to base stats
-	def = 50;
-        atk = 0.8;
-    }
+    public abstract void normalize();
 	
     public abstract String about();
 	
